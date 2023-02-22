@@ -1,0 +1,41 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": ["plugin:react/recommended", "google"],
+    "overrides": [],
+    "parser": "@babel/eslint-parser",
+    "parserOptions": {
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
+    },
+    "plugins": ["react"],
+    "rules": {
+        "indent": ["error", 4],
+        "no-unused-vars": "warn",
+        "require-jsdoc": "off",
+        "react/react-in-jsx-scope": "off",
+        "max-len": ["warn", {"code": 120}],
+        "operator-linebreak": [
+            "warn",
+            "after",
+            {"overrides": {"?": "before", ":": "before"}}
+        ],
+        "sort-imports": [
+            "error",
+            {
+                "ignoreCase": false,
+                "ignoreDeclarationSort": true,
+                "ignoreMemberSort": true,
+                "memberSyntaxSortOrder": ["none", "all", "multiple", "single"],
+                "allowSeparatedGroups": true
+            }
+        ]
+    }
+}
